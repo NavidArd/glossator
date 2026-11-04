@@ -10,6 +10,7 @@
 <p align="center">
   <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-2b2b2b">
   <img alt="KOReader plugin" src="https://img.shields.io/badge/KOReader-plugin-4b4b4b">
+  <a href="https://github.com/NavidArd/glossator/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/NavidArd/glossator?color=2b2b2b&label=release"></a>
   <img alt="Install with KPM" src="https://img.shields.io/badge/install-KPM-6b6b6b">
   <img alt="Made on a Kindle Scribe" src="https://img.shields.io/badge/made%20on-Kindle%20Scribe-8a8a8a">
 </p>
@@ -105,7 +106,8 @@ A KOReader icon appears on the home screen. Open KOReader once, then close it.
 The address is long to type on the Kindle's keyboard: check it carefully. If your search bar doesn't take it, run the same commands without the `;` in a terminal such as kTerm (`;kpm install kterm`).
 
 **Or by hand, over USB:**
-1. Download this repository: green **Code** button → **Download ZIP**. Unzip it.
+1. Download **[glossator.koplugin.zip](https://github.com/NavidArd/glossator/releases/latest/download/glossator.koplugin.zip)** from the [latest release](https://github.com/NavidArd/glossator/releases/latest), and unzip it. You get a `glossator.koplugin` folder.
+   - Use the release, not the green **Code → Download ZIP** button. That one is the whole repository (screenshots, tests, the KPM package), not just the plugin.
 2. Plug the Kindle into your computer and open the `koreader/plugins/` folder on it.
 3. Copy the `glossator.koplugin` folder into it.
    - **Windows:** copying over an older copy can fail, so delete the old folder first.
@@ -127,7 +129,7 @@ Open a book. Everything is under **Tools → Glossator**. Write on the page with
 
 | | With KPM | By hand |
 |---|---|---|
-| **Update** | `;kpm update`, then `;kpm upgrade` | Replace the `glossator.koplugin` folder |
+| **Update** | `;kpm update`, then `;kpm upgrade` | Download the [latest release](https://github.com/NavidArd/glossator/releases/latest) and replace the `glossator.koplugin` folder |
 | **Remove** | `;kpm uninstall glossator` | Delete the `glossator.koplugin` folder |
 
 Updating or removing never touches your notes, your ink or your key file.
@@ -361,6 +363,7 @@ tools/emulator/            KOReader's Linux build, headless, with scripted pen i
 1. Bump `version` in `glossator.koplugin/_meta.lua`.
 2. Run `python3 tools/build-kpm.py`.
 3. Commit the new `.kpkg` and `kpm/manifest.v2.json`. KPM users get it with `;kpm upgrade`.
+4. Make a GitHub release tagged with the version, with `glossator.koplugin.zip` attached: zip the `glossator.koplugin` folder, so the zip holds that one folder. The README's download link and the plugin stores (AppStore, Storefront) use the latest release.
 
 ---
 
