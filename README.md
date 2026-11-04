@@ -326,6 +326,10 @@ Glossator also has its own **Export notes (Markdown)**, one file per book in `ko
 - **Gemini or GPT says it needs an OpenRouter key:** those models only work through OpenRouter. Add an `sk-or-…` key on its own line.
 - **Stray lines while the palm rests:** make sure **Keep the pen apart from the hand** is on, then restart KOReader.
 - **Do I need Ink Away?** No. Glossator includes the parts of [Ink Away](https://github.com/EmirErtorer/ink-away.koplugin) it uses. If you keep Ink Away installed, they get along. Ink you drew with Ink Away stays in Ink Away's own files.
+- **KPM says "Could not find artifact for given target":** KPM doesn't know Glossator's package source yet. Its log then shows only the official list (`repo.kindlemodding.org`).
+  1. Run the `;kpm add-repo …` line from [Step 3](#step-3-install-glossator).
+  2. Check it with `;kpm list-repo`: Glossator should be listed.
+  3. Run `;kpm install glossator` again.
 - **The `;kpm` command does nothing:** make sure Wi-Fi is on and you ran `;kpm update` first. See [kindlemodding.org](https://kindlemodding.org/jailbreaking/whats-next/index.html) for KPM itself.
 
 Found a bug? [Open an issue](https://github.com/NavidArd/glossator/issues) with your device, KOReader version and, if there is one, `koreader/crash.log`.
