@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "id": "glossator",
+  "name": "Glossator",
+  "description": "Glossator, the KOReader plugin for AI answers in the margin",
+  "packages": {
+    "glossator": {
+      "name": "Glossator",
+      "author": "NavidArd",
+      "description": "KOReader plugin: write on the page with the pen and an AI answers in the margin like a teacher, with real math. Needs KOReader (kpm install koreader).",
+      "artifacts": [
+        {
+          "url": "packages/glossator/glossator_1.0.0_kindleany.kpkg",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "glossator",
+  "name": "Glossator",
+  "author": "NavidArd",
+  "description": "KOReader plugin: write on the page with the pen and an AI answers in the margin like a teacher, with real math. Needs KOReader (kpm install koreader).",
+  "version": [1, 0, 0],
+  "dependencies": [],
+  "supported_platforms": null
+}

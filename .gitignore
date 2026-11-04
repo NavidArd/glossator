@@ -1,0 +1,9 @@
+# API keys and test answers: never commit
+*_key.txt
+*.key
+glossator_mock.txt
+inkai_mock.txt
+# local output
+glossator_exports/
+crash.log
+__pycache__/
