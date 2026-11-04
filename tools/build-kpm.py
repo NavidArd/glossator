@@ -3,7 +3,7 @@
 
     python3 tools/build-kpm.py
 
-Packs kpm/package/ (manifest and hooks) with glossator.koplugin/ into
+Packs kpm/package/ (manifest, hooks, README) and LICENSE with glossator.koplugin/ into
 kpm/packages/glossator/glossator_<version>_kindleany.kpkg, the way KPM's
 kpm-helper.py packs a package (a gzip tar with the files at its root), and adds
 the version to kpm/manifest.v2.json. The version comes from
@@ -43,6 +43,7 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         stage = os.path.join(tmp, "glossator")
         shutil.copytree(PKG_SRC, stage)
+        shutil.copy(os.path.join(ROOT, "LICENSE"), os.path.join(stage, "LICENSE"))
         shutil.copytree(PLUGIN, os.path.join(stage, "glossator.koplugin"),
                         ignore=lambda d, names: [n for n in names if SECRETS.search(n)])
         with open(os.path.join(stage, "manifest.json"), "w", encoding="utf-8") as f:
